@@ -23,8 +23,8 @@
                 <span>
                     <p>{{i.task}}</p>
                    <a href="{% url 'markComplete' i.pk %}"> <button class="markbtn">Mark as completed</button></a>
-                   <a href="">   <button class="delbtn"><i class="fa-solid fa-trash"></i></button></a>
-                   <a href="">  <button class="upbtn"><i class="fa-solid fa-pen"></i></button></a>
+                   <a href="{% url 'deletedTask' i.id %}">    <button class="delbtn"><i class="fa-solid fa-trash"></i></button></a>
+                   <a href="{% url 'updateTask' i.id %}">  <button class="upbtn"><i class="fa-solid fa-pen"></i></button></a>
                 </span>
             {% endif %}
     
