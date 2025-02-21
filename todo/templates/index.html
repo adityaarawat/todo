@@ -18,25 +18,30 @@
         </div>
         <div class="todoTask">
             <div class="notCompleted">
-             
+             {% for i in tasks %}
+             {% if i.task %}
                 <span>
-                    <input type="text" placeholder="This is some Text">
+                    <p>{{i.task}}</p>
                     <button class="markbtn">Mark as completed</button>
                     <button class="delbtn"><i class="fa-solid fa-trash"></i></button>
                     <button class="upbtn"><i class="fa-solid fa-pen"></i></button>
                 </span>
-               
-
+            {% endif %}
+    
+             {% endfor %}
+    
             </div>
             <div class="Completed">
                 <div class="completedTaskHeading">
                     <h3>Completed Task</h3>
                 </div>
+                
                 <div class="completedTask">
-                    <p>This is Completed Task</p>
-                  
+                    {% for i in completeTask %}
+                    <p>{{i.task}}</p>
+                    {% endfor %}
                 </div>
-             
+    
             </div>
            
         </div>
