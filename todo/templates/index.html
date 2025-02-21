@@ -47,9 +47,10 @@
         </div>
         <div class="todoAdd">
             
-                <form action="">
-                <input type="text" placeholder="This is the New Task">
-                <button>Add</button>
+                <form action="{% url 'addTask' %}" method="POST">
+                    {% csrf_token %}
+                <input type="text" name="task" placeholder="This is the New Task">
+                <button type="submit">Add</button>
     
             </form> 
         </div>
