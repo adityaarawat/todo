@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+   <main>
+    <section class="todoContainer">
+        <h1>Django Todo App</h1>
+        <div class="day">
+            <h2>My Day</h2>
+            <p>{% now "jS F Y" %}</p>
+        </div>
+        <div class="todoTask">
+            <div class="notCompleted">
+             
+                <span>
+                    <input type="text" placeholder="This is some Text">
+                    <button class="markbtn">Mark as completed</button>
+                    <button class="delbtn"><i class="fa-solid fa-trash"></i></button>
+                    <button class="upbtn"><i class="fa-solid fa-pen"></i></button>
+                </span>
+               
+
+            </div>
+            <div class="Completed">
+                <div class="completedTaskHeading">
+                    <h3>Completed Task</h3>
+                </div>
+                <div class="completedTask">
+                    <p>This is Completed Task</p>
+                  
+                </div>
+             
+            </div>
+           
+        </div>
+        <div class="todoAdd">
+            
+                <form action="">
+                <input type="text" placeholder="This is the New Task">
+                <button>Add</button>
+    
+            </form> 
+        </div>
+    </section>
+   </main>
+</body>
+</html>
